@@ -6,12 +6,12 @@ const connectDB = require('./db')
 const PORT = process.env.PORT ||  5000;
 
 // let's tackle cors
-const corsOptions = {
-    origin: 'https://food-abo7y126p-manankumar6s-projects.vercel.app',
-   methods: "GET,POST,PUT,DELETE, PATCH,HEAD",
-   credential:true
-  }
-app.use(cors(corsOptions));
+// const corsOptions = {
+//     origin: 'https://food-abo7y126p-manankumar6s-projects.vercel.app',
+//    methods: "GET,POST,PUT,DELETE, PATCH,HEAD",
+//    credential:true
+//   }
+app.use(cors());
 
 app.use(express.json())
 app.use("/api", require("./Router/User"))
