@@ -8,6 +8,12 @@
       {
         "src": "/(.*)",
         "dest": "index.js"
+      },
+      
+      {
+        "src": "/api/foodData",
+        "dest": "/api/foodData"
       }
+
     ]
   }
