@@ -3,15 +3,15 @@ const express = require("express");
 const app = express();
 const cors = require('cors');
 const connectDB = require('./db')
-const PORT = process.env.PORT ||  5000;
+const PORT = process.env.PORT ||  8080;
 
 // let's tackle cors
-// const corsOptions = {
-//     origin: 'https://food-abo7y126p-manankumar6s-projects.vercel.app',
-//    methods: "GET,POST,PUT,DELETE, PATCH,HEAD",
-//    credential:true
-//   }
-app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:3000',
+   methods: "GET,POST,PUT,DELETE, PATCH,HEAD",
+   credential:true
+  }
+app.use(cors(corsOptions));
 
 app.use(express.json())
 app.use("/api", require("./Router/User"))
